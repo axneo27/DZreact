@@ -1,0 +1,46 @@
+body {
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  width:60%;
+  margin:auto;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 100%;
+}
+
+.images, .book {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-self: center;
+  align-self: center;
+}
+
+#author {
+  font-size: 1.5em;
+  font-weight: 500;
+  margin: 0.5em 0;
+}
+
+img {
+  width: 350px;
+  height: 200px;
+}
+
+#bookImg {
+  width: auto;
+  height: auto;
+}
+
+.book {
+  flex-direction: row;
+  gap: 20px;
+}
