@@ -1,0 +1,11 @@
+.cool-image {
+    position: relative;
+    background: radial-gradient(circle at center, rgba(151, 160, 160, 0.2), black);
+    border: 3px solid rgb(173, 186, 186);
+    box-shadow: 0 0 20px rgba(193, 197, 197, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
+}
