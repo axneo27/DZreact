@@ -40,3 +40,25 @@
 .read-the-docs {
   color: #888;
 }
+
+:root {
+  --text-primary-light: #000;
+  --text-primary-dark: #fff;
+  --bg-primary-light: #fff;
+  --bg-primary-dark: #000;
+}
+
+.light-theme {
+  --text-primary: var(--text-primary-light);
+  --bg-primary: var(--bg-primary-light);
+}
+
+.dark-theme {
+  --text-primary: var(--text-primary-dark);
+  --bg-primary: var(--bg-primary-dark);
+}
+
+body {
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+}

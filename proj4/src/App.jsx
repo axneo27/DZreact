@@ -1,17 +1,30 @@
-import './App.css';
-import UserGreeting from './components/greeting/index';
-import Button from './components/button';
+import './App.css'
+import { useState, useEffect } from 'react'
 
-function App() {
+function App1() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    const savedCount = localStorage.getItem('count');
+    if (savedCount) {
+      setCount(parseInt(savedCount, 10));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('count', count.toString());
+  }, [count]);
+
+  const increment = () => {
+    setCount(count + 1);
+  };
 
   return (
-    <>
-      <UserGreeting isLoggedIn={true}/>
-      <Button type="confirm">Confirm</Button>
-      <Button type="cancel">Cancel</Button>
-      <Button type="">Primary</Button>
-    </>
+    <div>
+      <h1>Counter: {count}</h1>
+      <button onClick={increment}>Increment</button>
+    </div>
   );
 }
 
-export default App;
+export default App1;
